@@ -22,20 +22,19 @@ namespace ArtboxGames
         private AppOpenAd appOpenAd;
         private bool showAppOpen = true;
 
-        private string gameId = "3894521";
-        private string interstitialAdUnitId_Unity = "Android_Interstitial";
-        private string rewardAdUnitId_Unity = "Android_Rewarded";
+        private string gameId = "4085737";
+        private string interstitialAdUnitId_Unity = "video";
+        private string rewardAdUnitId_Unity = "rewardedVideo";
 
-        private int clickCount = 0;
-
-        private string appID = "ca-app-pub-6163322720080156~6800706328";
-        private string bannerUnitId = "ca-app-pub-6163322720080156/4534945538";
+        //private string appID = "ca-app-pub-6163322720080156~6800706328";
+        private string bannerUnitId = "ca-app-pub-6163322720080156/1748840913";
+        private string openAdUnitId = "ca-app-pub-6163322720080156/4558899012";
         private string interstitialAdUnitId = "ca-app-pub-6163322720080156/2571501484";
         private string rewardAdUnitId = "ca-app-pub-6163322720080156/7591043813";
-        private string openAdUnitId = "ca-app-pub-6163322720080156/4558899012";
 
         private bool giveReward = false;
-        int rewardAmount = 1000;
+        private int rewardAmount = 1000;
+        public bool testAd = false;
 
         void Awake()
         {
@@ -53,6 +52,14 @@ namespace ArtboxGames
         // Start is called before the first frame update
         public void Start()
         {
+            if (testAd)
+            {
+                bannerUnitId = "ca-app-pub-3940256099942544/6300978111";
+                openAdUnitId = "ca-app-pub-3940256099942544/9257395921";
+                interstitialAdUnitId = "ca-app-pub-3940256099942544/1033173712";
+                rewardAdUnitId = "ca-app-pub-3940256099942544/5224354917";
+            }
+
             Advertisement.Initialize(gameId, false, this);
 
             // Listen to application foreground and background events.
@@ -88,7 +95,7 @@ namespace ArtboxGames
             }
 
             // Create a 320x50 banner at the top of the screen.
-            bannerView = new BannerView(bannerUnitId, AdSize.Banner, AdPosition.Top);
+            bannerView = new BannerView(bannerUnitId, AdSize.Banner, AdPosition.Bottom);
 
             // Create an empty ad request.
             banner_request = new AdRequest();
@@ -422,12 +429,14 @@ namespace ArtboxGames
 
         public void HideBanner()
         {
-            this.bannerView.Hide();
+            if (this.bannerView != null)
+                this.bannerView.Hide();
         }
 
         public void ShowBanner()
         {
-            this.bannerView.Show();
+            if (this.bannerView != null)
+                this.bannerView.Show();
         }
     }
 }

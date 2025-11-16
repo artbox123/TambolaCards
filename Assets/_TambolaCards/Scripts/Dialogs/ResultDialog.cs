@@ -30,7 +30,7 @@ namespace ArtboxGames
         // Start is called before the first frame update
         void Start()
         {
-            gameScreen = FindObjectOfType<GameScreen>();
+            gameScreen = FindAnyObjectByType<GameScreen>();
             SetClaimData();
             StartCoroutine(GenerateUsers());
             ShowClaims();

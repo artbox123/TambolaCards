@@ -247,14 +247,14 @@ namespace ArtboxGames
         private void InitializeAchievements()
         {
             // achievement 1
-            Achievements achievement1 = new Achievements();
-            achievement1.id = "achievement1";
-            achievement1.name = "Facebook Login";
-            achievement1.description = "Get 1000 coins on first Facebook login";
-            achievement1.limit = 1f;
-            achievement1.fillAmount = 0f;
-            achievement1.status = false;
-            achievement1.winAmount = 1000;
+            //Achievements achievement1 = new Achievements();
+            //achievement1.id = "achievement1";
+            //achievement1.name = "Facebook Login";
+            //achievement1.description = "Get 1000 coins on first Facebook login";
+            //achievement1.limit = 1f;
+            //achievement1.fillAmount = 0f;
+            //achievement1.status = false;
+            //achievement1.winAmount = 1000;
 
             // achievement 2
             Achievements achievement2 = new Achievements();
@@ -296,7 +296,7 @@ namespace ArtboxGames
             achievement5.status = false;
             achievement5.winAmount = 20000;
 
-            achievements.Add(achievement1);
+            //achievements.Add(achievement1);
             achievements.Add(achievement2);
             achievements.Add(achievement3);
             achievements.Add(achievement4);

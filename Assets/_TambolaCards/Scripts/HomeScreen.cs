@@ -51,7 +51,6 @@ namespace ArtboxGames
                 PlaySound(4);
                 DoNotDestroy.Instance.gameStarted = true;
             }
-            AdsManager.Instance?.ShowInterstitial();
         }
 
         private void Update()

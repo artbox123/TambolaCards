@@ -4,6 +4,15 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/_TambolaCards/Scenes/Splash.unity
+    guid: 01c4e57157004ff44ad5db45c3042814
+  - enabled: 1
+    path: Assets/_TambolaCards/Scenes/Home.unity
+    guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/_TambolaCards/Scenes/Game.unity
+    guid: 667ba28772591c6419036d4210ca3aa1
   m_configObjects: {}
   m_UseUCBPForAssetBundles: 0

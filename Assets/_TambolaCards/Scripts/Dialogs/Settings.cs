@@ -65,7 +65,7 @@ namespace ArtboxGames
 #if UNITY_IOS
         Application.OpenURL("https://dineshladumore.wordpress.com");
 #elif UNITY_ANDROID
-            Application.OpenURL("https://tambola-cards-0.flycricket.io/privacy.html");
+            Application.OpenURL("https://tambola-cards-artboxinfotech.netlify.app");
 #endif
         }
 
@@ -76,18 +76,10 @@ namespace ArtboxGames
 
         public void Logout()
         {
-            if (PlayerInfo.Instance.login == 2)
-                SocialLogin.Instance.OnSignOut();
-
             PlayerInfo.Instance.userName = "";
             PlayerInfo.Instance.userImage = "0";
             PlayerInfo.Instance.login = 0;
             LoadScene("Login", DoNotDestroy.Instance.loadingPanel);
-        }
-
-        public void Close()
-        {
-            AdsManager.Instance?.ShowInterstitial();
         }
     }
 }

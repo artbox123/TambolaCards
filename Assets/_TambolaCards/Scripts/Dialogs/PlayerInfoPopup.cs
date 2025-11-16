@@ -50,8 +50,6 @@ namespace ArtboxGames
                 playerName.text = editName.text;
                 HomeScreen.Instance.playerName.text = editName.text;
                 PlayerInfo.Instance.userName = editName.text;
-
-                AdsManager.Instance?.ShowInterstitial();
             }
         }
 
